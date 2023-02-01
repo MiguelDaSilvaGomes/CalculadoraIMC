@@ -1,12 +1,16 @@
 import React from 'react';
 
 
-const Resultado = (props) => {
+export default class Resultado extends React.Component{
+  constructor() {
+    super()
+  }
+  render(){
     return (
         <div>
-        <p className='p'>resultado: {props.r}</p>
+        <p className='p'>resultado: {this.props.r}</p>
       </div>
       );
+    }
 }
  
-export default Resultado;

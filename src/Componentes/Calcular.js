@@ -1,17 +1,24 @@
 import React from 'react';
 
-const Calcular = (props) => {
-    const calc = () => {
-        props.sr(props.p/(props.a*props.a))
+export default class Calcular extends React.Component{
+  constructor() {
+    super()
+    this.calc=this.fcalc.bind(this)
+  }
+ 
 
+     fcalc = () => {
+        const r = this.props.p/(this.props.a*this.props.a)
+        this.props.sr(r)
        }
+       render(){
     return ( 
 
             <div>
-              <button className='botao' onClick={calc}>Calcular</button>
+              <button className='botao' onClick={this.calc}>Calcular</button>
             </div>
 
      );
+    }
 }
  
-export default Calcular;

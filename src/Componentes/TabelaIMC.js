@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-const TabelaIMC = () => {
+export default class TabelaIMC extends React.Component{
+  render(){
     return ( 
         <table border={1}  style={{borderCollapse:'collapse', color:'white'}}>
         <thead>
@@ -41,7 +42,7 @@ const TabelaIMC = () => {
             </tr>
         </tbody>
      </table>
-     );
+     ); 
+   }
 }
  
-export default TabelaIMC;

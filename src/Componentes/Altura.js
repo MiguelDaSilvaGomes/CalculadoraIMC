@@ -1,14 +1,18 @@
 import React from 'react';
 
 
-const Altura = (props) => {
+export default class Altura extends React.Component {
+     constructor(){
+          super()
+     }
+render(){
     return ( 
-   <div>
-        <label className='div' >Digite sua altura:</label>
-        <input type="text" value={props.a}  onChange={(e)=>props.sa(e.target.value)}  />
-   </div> 
-   
+          <div>
+               <label className='div' >Digite sua altura:</label>
+               <input type="text" value={this.props.a}  onChange={(e)=>this.props.sa(e.target.value)}  />
+          </div> 
+          
    );
 }
+}
  
-export default Altura;
